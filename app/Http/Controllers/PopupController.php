@@ -52,7 +52,7 @@ class PopupController extends Controller
 	}
 	public function update(PopupFormRequest $request, $id)
 	{
-		$popup=popup::findOrFail($id);
+		$popup=Popup::findOrFail($id);
 		$popup->titulo=$request->get('titulo');
 		$popup->subtitulo=$request->get('subtitulo');
 		$popup->noticia=$request->get('noticia');
