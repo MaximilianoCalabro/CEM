@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2018 a las 17:12:35
+-- Tiempo de generación: 25-07-2018 a las 18:02:32
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -52,7 +52,7 @@ CREATE TABLE `noticias` (
   `titulo` varchar(250) COLLATE utf8_bin NOT NULL,
   `fecha` varchar(250) COLLATE utf8_bin NOT NULL,
   `imagen` varchar(250) COLLATE utf8_bin NOT NULL,
-  `subtitulo` varchar(100) COLLATE utf8_bin NOT NULL,
+  `subtitulo` varchar(250) COLLATE utf8_bin NOT NULL,
   `noticia` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -61,13 +61,9 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id_noticias`, `titulo`, `fecha`, `imagen`, `subtitulo`, `noticia`) VALUES
-(5, 'NOTICIA N°1', '23 JULIO, 2018', 'img-thumb-1.jpg', 'SUBTITULO N°1', 'MUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIASMUCHAS NOTICIAS'),
-(6, 'NOTICIA N°2', '24 JULIO, 2018', 'img-thumb-1.jpg', 'Hoy es 23/07, Hoy es 23/07,', 'Hoy es 23/07, Hoy es 23/07, Hoy es 23/07, Hoy es 23/07, Hoy es 23/07, Hoy es 23/07, Hoy es 23/07, Hoy es 23/07,'),
-(7, 'NOTICIA N°3', '1 MAYO, 1989', 'av-2.jpg', '', ''),
-(8, 'NOTICIA N°4', 'ALGUN DIA DE ALGUN AÑO', 'img-lg-1.jpg', '', ''),
-(9, 'asdasdas', 'fasfasfasf', 'img-lg-2.jpg', '', ''),
-(10, 'gdfsgdsh', 'fdhdfhdf', 'img-md-3.jpg', '', ''),
-(11, 'jyt', 'tyktyktykty', 'img-widget-7.jpg', '', '');
+(5, 'Investigan un secuestro virtual en el centro de la ciudad', 'Miércoles 25.07.2018', '217771_1.jpg', 'Una vecina recibió un llamado en donde se le dijo que su hijo estaba secuestrado.', 'Por estas horas se investiga un caso ocurrido durante la madrugada de este miércoles en la ciudad de Santa Fe en el que se habría producido un presunto secuestro virtual.\r\n\r\nLas primeras informaciones indican que una vecina del centro de la capital provincial recibió un llamado al teléfono de su domicilio y le dijeron que tenían secuestrado a un hijo; por lo que le exigieron dinero para liberarlo.\r\n\r\nTambién se supo que la mujer dejó en la vereda de su vivienda una suma importante de dinero en pesos y dólares, como así también de algunas joyas de oro.\r\n\r\nPor último, se conoció que al poco tiempo se hizo presente el hijo de la mujer.'),
+(6, 'Piden mayor intervención del municipio en la zona de countries', 'Martes 24.07.2018', '217759_1.jpg', 'Preocupan algunos casos de inseguridad y también la quema de basura, la circulación de animales por el Acceso Norte y la falta de iluminación, entre otros problemas.', 'El crecimiento demográfico de los barrios privados en la zona de countries de la autopista Santa Fe - Rosario hace más visible los problemas ambientales, de planificación urbana y también de seguridad en la zona de Santo Tomé que va desde la calle República de Chile, donde comienza el Acceso Norte, hasta los countries Altos de la Ribera, La Tatenguita y el Club de Campo El Paso.'),
+(7, 'Falleció un motociclista tras siniestro vial en Monte Vera', 'Miércoles 25.07.2018', '217787_1.jpg', 'La víctima (56) intentó esquivar una bicicleta y derrapó en la Ruta 2, mil metros al norte de la intersección con la RP 5.', 'Por cuestiones que son materia de peritajes, este miércoles por la mañana se produjo un siniestro vial en la Ruta Provincial 2 que dejó como saldo un hombre fallecido.\r\n\r\n \r\n\r\nSegún se supo, el hecho tuvo lugar alrededor de las 6.30, 1000 metros al norte del cruce del mencionado camino con la Ruta Provincial 5, en el ingreso sur de la localidad de Monte Vera.Sobre los protagonistas del incidente, se supo que estuvieron involucrados una motocicleta, una bicicleta y un automóvil.  \r\n\r\n \r\n\r\nPor lo que pudo averiguar El Litoral, la víctima, un hombre de 56 años, habría intentado esquivar a una bicicleta y en esa maniobra derrapó e impactó contra la cinta asfáltica. \r\n\r\n \r\n\r\nEn el lugar trabajó personal policial y peritos, quienes interrumpieron el tránsito mientras realizaron trabajos periciales.');
 
 -- --------------------------------------------------------
 
@@ -101,6 +97,15 @@ CREATE TABLE `slider` (
   `id_slider` int(11) NOT NULL,
   `imagen` varchar(250) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `slider`
+--
+
+INSERT INTO `slider` (`id_slider`, `imagen`) VALUES
+(1, 'abdominoplastia.jpg'),
+(2, 'facial.jpg'),
+(3, 'axilas.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -144,7 +149,7 @@ ALTER TABLE `background`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id_noticias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_noticias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `popup`
@@ -156,7 +161,7 @@ ALTER TABLE `popup`
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
