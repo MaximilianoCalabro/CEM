@@ -78,22 +78,22 @@
 						</div> <!-- /section title -->
 
 						<!-- section logos -->
-						<div class="empresas">
+						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
 							<a href="http://www.carnave.com.ar/" target="_blank"><img src="../img/empresa1.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
-						<div class="empresas">
+						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
 							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/empresa2.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
-						<div class="empresas">
+						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
 							<a href="http://www.ciaavicola.com.ar/" target="_blank"><img src="../img/empresa3.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
-						<div class="empresas">
+						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
 							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/empresa4.png"></a>
 						</div> <!-- /section logos -->
 					</div> <!-- Main Column -->
@@ -227,7 +227,7 @@
 							<!-- footer social -->
 							<div class="footer-widget social-widget">
 								<ul>
-									<li>AGH - AVIGAN</li>
+									<li>° AGH - AVIGAN</li>
 									<li>Humboldt</li>
 									<li>Ruta 70 km 33 - CP 3081</li>
 									<li>Tel +54 3496 480380</li>
@@ -242,7 +242,7 @@
 							<!-- footer social -->
 							<div class="footer-widget social-widget">
 								<ul>
-									<li>CARNAVE</li>
+									<li>° CARNAVE</li>
 									<li>Esperanza</li>
 									<li>Hohnfels 2971 - CP 3081</li>
 									<li>Tel +54 3496 422002</li>
@@ -257,7 +257,7 @@
 							<!-- footer social -->
 							<div class="footer-widget social-widget">
 								<ul>
-									<li>COMPAÑÍA AVÍCOLA</li>
+									<li>° COMPAÑÍA AVÍCOLA</li>
 									<li>Santa Fe</li>
 									<li>Facundo Zuviría - CP 3000</li>
 									<li>Tel +54 342 4892111</li>

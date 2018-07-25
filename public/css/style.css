@@ -186,6 +186,7 @@ textarea.input {
 
 .empresas {
 	float: left;
+	text-align: center;
 }
 
 #top-footer {
@@ -309,7 +310,7 @@ a {
     height: 100%;
     width: 100%;
     margin: 20px 0px;
-    padding: 20px;
+    padding: 10px;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -331,6 +332,7 @@ a {
         font-size: 1.7rem;
         line-height: 24px;
         color: #3d8a3f;
+        word-break: normal;
         }
         .btn.btn-mini {
             background: #3d8a3f;
