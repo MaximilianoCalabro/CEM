@@ -154,7 +154,7 @@
 											    	
 											    </div>
 										        
-											    <div class="carousel slide" id="myCarousel">
+											    <div class="carousel slide" id="myCarousel-{{$nots->id_noticias}}">
 											        <div class="carousel-inner">
 											 
 											            <div class="item active">
@@ -176,8 +176,8 @@
 											        </div>
 											        
 											        <div class="control-box">                            
-											            <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
-											            <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+											            <a data-slide="prev" href="#myCarousel-{{$nots->id_noticias}}" class="carousel-control left">‹</a>
+											            <a data-slide="next" href="#myCarousel-{{$nots->id_noticias}}" class="carousel-control right">›</a>
 											        </div><!-- /.control-box -->   
 											                              
 											    </div><!-- /#myCarousel -->

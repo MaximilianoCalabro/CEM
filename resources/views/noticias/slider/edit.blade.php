@@ -17,7 +17,7 @@
             {{Form::token()}}
             <div class="form-group">
                   <label for="imagen">Imágen (600 x 600 px)</label>
-                  <input type="file" name="imagen" class="form-control" value="{{$slider->imagen}}">
+                  <input type="file" name="imagen[]" class="form-control" value="{{$slider->imagen}}" multiple>
                   @if (($slider->imagen)!='')
                         <img src="{{asset('img/'.$slider->imagen)}}" height="150px" width="150px">
                   @endif

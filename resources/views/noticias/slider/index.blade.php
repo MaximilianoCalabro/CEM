@@ -15,7 +15,7 @@
 				</thead>
                @foreach ($slider as $cat)
 				<tr>
-					<td><img src="{{asset('img/'.$cat->imagen)}}" height="150px" width="150px"></td>
+					<td><img src="{{asset('img/'.$cat->imagen)}}" height="150px" width="150px" multiple></td>
 					<td>
 						<a href="{{URL::action('SliderController@edit',$cat->id_slider)}}"><button class="btn btn-info">Editar</button></a>
                         <a href="" data-target="#modal-delete-{{$cat->id_slider}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

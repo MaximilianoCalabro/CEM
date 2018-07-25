@@ -24,7 +24,7 @@ class SliderFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'imagen'=>'mimes:jpeg,bmp,png'
+            'imagen'=>''
         ];
     }
 }
