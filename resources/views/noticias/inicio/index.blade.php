@@ -11,15 +11,21 @@
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
+					<th>N°</th>
 					<th>Título</th>
+					<th>Subtítulo</th>
 					<th>Fecha</th>
 					<th>Imágen</th>
+					<th>Noticia</th>
 				</thead>
                @foreach ($noticias as $cat)
 				<tr>
+					<td>{{ $cat->n }}</td>
 					<td>{{ $cat->titulo }}</td>
+					<td>{{ $cat->subtitulo }}</td>
 					<td>{{ $cat->fecha }}</td>
 					<td><img src="{{asset('img/'.$cat->imagen)}}" height="150px" width="150px"></td>
+					<td>{{ $cat->noticia }}</td>
 					<td>
 						<a href="{{URL::action('NoticiasController@edit',$cat->id_noticias)}}"><button class="btn btn-info">Editar</button></a>
                         <a href="" data-target="#modal-delete-{{$cat->id_noticias}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

@@ -24,9 +24,12 @@ class NoticiasFormRequest extends FormRequest
     public function rules()
     {
         return [
+            'n'=>'required',
             'titulo'=>'required|max:250',
             'fecha'=>'required|max:250',
-            'imagen'=>'mimes:jpeg,bmp,png'
+            'imagen'=>'mimes:jpeg,bmp,png',
+            'subtitulo'=>'required|max:100',
+            'noticia'=>'required|max:1000'
         ];
     }
 }

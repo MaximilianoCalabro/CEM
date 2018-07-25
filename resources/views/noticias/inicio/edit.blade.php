@@ -16,8 +16,16 @@
             {!!Form::model($noticias,['method'=>'PATCH','route'=>['inicio.update',$noticias->id_noticias],'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
+                  <label for="n">N°</label>
+                  <input type="text" name="n" class="form-control" value="{{$noticias->n}}" placeholder="N°">
+            </div>
+            <div class="form-group">
                   <label for="titulo">Título</label>
                   <input type="text" name="titulo" class="form-control" value="{{$noticias->titulo}}" placeholder="Título">
+            </div>
+            <div class="form-group">
+                  <label for="subtitulo">Subtítulo</label>
+                  <input type="text" name="subtitulo" class="form-control" value="{{$noticias->subtitulo}}" placeholder="Subtítulo">
             </div>
             <div class="form-group">
                   <label for="fecha">Fecha</label>
@@ -29,6 +37,10 @@
                   @if (($noticias->imagen)!='')
                         <img src="{{asset('img/'.$noticias->imagen)}}" height="150px" width="150px">
                   @endif
+            </div>
+            <div class="form-group">
+                  <label for="noticia">Noticia</label>
+                  <textarea type="text" name="noticia" class="form-control" placeholder="Noticia">{{$noticias->noticia}}</textarea>
             </div>
             <div class="form-group">
                   <button class="btn btn-primary" type="submit">Guardar</button>

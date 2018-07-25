@@ -99,8 +99,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/noticias/inicio"><i class="fa fa-circle-o"></i>Inicio Configurar</a></li>
-                <li><a href="/noticias/popup"><i class="fa fa-circle-o"></i> POP UP Configurar</a></li>
+                <li><a href="/noticias/inicio"><i class="fa fa-circle-o"></i> Inicio Configurar</a></li>
+                <li><a href="/noticias/slider"><i class="fa fa-circle-o"></i> Slider</a></li>
               </ul>
             </li>
 

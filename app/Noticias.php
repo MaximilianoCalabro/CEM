@@ -13,9 +13,12 @@ class Noticias extends Model
 	public $timestamps=false;
 
 	protected $fillable =[
+		'n',
 		'titulo',
+		'subtitulo',
 		'fecha',
-		'imagen'
+		'imagen',
+		'noticia'
 	];
 
 	protected $guarded =[
