@@ -16,8 +16,8 @@
 		{!!Form::open(array('url'=>'/noticias/slider','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
             <div class="form-group">
-            	<label for="imagen">Imágen (600 x 600 px)</label>
-            	<input type="file" name="imagen[]" class="form-control" multiple>
+            	<label for="imagen_slider">Imágen (600 x 600 px)</label>
+            	<input type="file" name="imagen_slider[]" class="form-control" multiple>
             </div>
             <div class="form-group">
             	<button class="btn btn-primary" type="submit">Guardar</button>

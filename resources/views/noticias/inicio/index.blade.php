@@ -29,6 +29,15 @@
                         <a href="" data-target="#modal-delete-{{$cat->id_noticias}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
+				<tr>
+					@foreach ($slider as $s)
+						@if($s->id_noticias == $cat->id_noticias)
+						<td>
+							<img src="{{asset('img/slider/'.$s->imagen)}}" height="150px" width="150px">
+						</td>
+						@endif
+					@endforeach
+				</tr>
 				@include ('noticias.inicio.modal')
 				@endforeach
 			</table>

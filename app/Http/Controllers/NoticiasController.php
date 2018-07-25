@@ -4,6 +4,7 @@ namespace CEM\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CEM\Noticias;
+use CEM\Slider;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use CEM\Http\Requests\NoticiasFormRequest;
@@ -21,7 +22,8 @@ class NoticiasController extends Controller
     	{
     		$query=trim($request->get('searchText'));
     		$noticias=DB::table('noticias')->get();
-    		return view('noticias.inicio.index',["noticias"=>$noticias,"searchText"=>$query]);
+    		$slider=DB::table('slider')->get();
+    		return view('noticias.inicio.index',["noticias"=>$noticias,"searchText"=>$query, "slider"=>$slider]);
     	}
     }
     public function create()
@@ -41,6 +43,16 @@ class NoticiasController extends Controller
 			$noticias->imagen=$file->getClientOriginalName();
 		}
 		$noticias->save();
+		if (Input::hasFile ('imagen_slider')){
+			foreach ($request->imagen_slider as $img) {
+				$slider=new Slider;
+				$slider->id_noticias=$noticias->id_noticias;
+				$file=$img;
+				$file->move(public_path().'/img/slider/',$file->getClientOriginalName());
+				$slider->imagen=$file->getClientOriginalName();
+				$slider->save();
+			}
+		}
 		return Redirect::to('noticias/inicio');
 	}
 	public function show($id)
@@ -64,6 +76,17 @@ class NoticiasController extends Controller
 			$noticias->imagen=$file->getClientOriginalName();
 		}
 		$noticias->update();
+		if (Input::hasFile ('imagen_slider')){
+			foreach ($request->imagen_slider as $img) {
+				$slider=new Slider;
+				$slider->id_noticias=$noticias->id_noticias;
+				$file=$img;
+				$file->move(public_path().'/img/slider/',$file->getClientOriginalName());
+				$slider->imagen=$file->getClientOriginalName();
+				$slider->save();
+			}
+		}
+		$slider->update();
 		return Redirect::to('noticias/inicio');
 	}
 	public function destroy($id)

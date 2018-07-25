@@ -153,25 +153,31 @@
 											        <h3>{{ $nots->titulo }}</h3>
 											    	
 											    </div>
-										        
+										       
 											    <div class="carousel slide" id="myCarousel-{{$nots->id_noticias}}">
+											        
 											        <div class="carousel-inner">
-											 
-											            <div class="item active">
-											            
-											                <div class="bannerImage">
-											                    <a href="#"><img src="http://placehold.it/960x405" alt=""></a>
-											                </div>
-											                                                         
-											            </div><!-- /Slide1 --> 
+											        	@foreach ($slider as $s)
+										        			@if($s->id_noticias == $nots->id_noticias)
+																@if ($loop->first)
+        															<div class="item active">
+											                			<div class="bannerImage">
+											                  			 <a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
+											               				</div>                    
+											            			</div><!-- /Slide1 --> 
+            													@else
+                													<div class="item">
+											                			<div class="bannerImage">
+											                    		<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
+											                		</div>                        
+											            			</div><!-- /Slide2 --> 
+       															 @endif
+										        			@endif
 
-											            <div class="item">
-											            
-											                <div class="bannerImage">
-											                    <a href="#"><img src="http://placehold.it/960x405" alt=""></a>
-											                </div>
-											                                                         
-											            </div><!-- /Slide2 -->                      
+										        		@endforeach
+											
+
+											                                 
 											 
 											        </div>
 											        
