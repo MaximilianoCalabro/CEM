@@ -42,6 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Open Sans', sans-serif;
 	color: #07090C;
 	font-weight:700;
+	word-break: normal;
 }
 
 h1 {
@@ -53,7 +54,7 @@ h2 {
 }
 
 h3 {
-	font-size:21.6px;
+	font-size:18px;
 }
 
 h4 {
@@ -214,6 +215,7 @@ textarea.input {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	overflow: scroll;
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
 	opacity:0;
@@ -229,7 +231,7 @@ textarea.input {
 .modalDialog > div {
 	width: 80%;
 	position: relative;
-	margin: 10% auto;
+	margin: 2% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: #fff;
@@ -297,13 +299,14 @@ a {
     text-transform: uppercase;
     }
     .page-header h3 {
-        line-height: 0.88rem;
+    	text-align: center;
+        line-height: 2rem;
         color: #fff;
         }
 
 /* Thumbnail Box */
 .caption {
-    height: 140px;
+    height: 100%;
     width: 100%;
     margin: 20px 0px;
     padding: 20px;
@@ -315,12 +318,13 @@ a {
     padding: 0px 20px;
 }
 .caption .span4 {
-    border-right: 1px dotted #CCCCCC;
+   /* border-right: 1px dotted #CCCCCC;*/
 }
 .caption h3 {
     color: #3d8a3f;
     line-height: 2rem;
     margin: 0 0 20px;
+    word-break: normal;
     text-transform: uppercase;
     }
     .caption p {

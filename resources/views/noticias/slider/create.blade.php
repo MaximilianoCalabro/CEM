@@ -13,27 +13,11 @@
 			</div>
 			@endif
 
-		{!!Form::open(array('url'=>'/noticias/inicio','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
+		{!!Form::open(array('url'=>'/noticias/slider','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
-            <div class="form-group">
-                  <label for="titulo">Título</label>
-                  <input type="text" name="titulo" class="form-control" placeholder="Título">
-            </div>
-            <div class="form-group">
-                  <label for="subtitulo">Subtítulo</label>
-                  <input type="text" name="subtitulo" class="form-control" placeholder="Subtítulo">
-            </div>
-            <div class="form-group">
-            	<label for="fecha">Fecha</label>
-            	<input type="text" name="fecha" class="form-control" placeholder="Fecha">
-            </div>
             <div class="form-group">
             	<label for="imagen">Imágen (600 x 600 px)</label>
             	<input type="file" name="imagen" class="form-control">
-            </div>
-            <div class="form-group">
-                  <label for="noticia">Noticia</label>
-                  <textarea type="text" name="noticia" class="form-control" placeholder="Noticia"></textarea>
             </div>
             <div class="form-group">
             	<button class="btn btn-primary" type="submit">Guardar</button>

@@ -20,7 +20,7 @@ Route::get('/.admin', function () {
 });
 
 Route::resource('/noticias/inicio','NoticiasController');
-Route::resource('/noticias/popup','PopupController');
+Route::resource('/noticias/slider','SliderController');
 Route::resource('/background','BackgroundController');
 
 Route::get('/', 'PaginaController@show');
