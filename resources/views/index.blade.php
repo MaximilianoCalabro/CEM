@@ -127,7 +127,7 @@
 									<img src="{{url('/')}}/img/{{$nots->imagen}}" alt="">
 								</div>
 								<div class="article-body">
-									<h3 class="article-title"><a href="#{ openModal . {$nots->n}}">{{ $nots->titulo }}</a></h3>
+									<h3 class="article-title"><a href="#openModal-{{$nots->id_noticias}}">{{ $nots->titulo }}</a></h3>
 									<ul class="article-meta">
 										<li><i class="fa fa-clock-o"></i>{{ $nots->fecha }}</li>
 									</ul>
@@ -138,7 +138,7 @@
 						</div>
 						<!-- /owl carousel 2 -->
 						@foreach ($noticias as $nots)
-						<div id="{openModal.{$nots->n}}" class="modalDialog">
+						<div id="openModal-{{$nots->id_noticias}}" class="modalDialog">
 								<div>
 												
 									<a href="#close" title="Close" class="close">X</a>

@@ -24,7 +24,6 @@ class NoticiasFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'n'=>'required',
             'titulo'=>'required|max:250',
             'fecha'=>'required|max:250',
             'imagen'=>'mimes:jpeg,bmp,png',

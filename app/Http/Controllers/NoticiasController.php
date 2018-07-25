@@ -31,7 +31,6 @@ class NoticiasController extends Controller
 	public function store(NoticiasFormRequest $request)
 	{
 		$noticias=new Noticias;
-		$noticias->n=$request->get('n');
 		$noticias->titulo=$request->get('titulo');
 		$noticias->subtitulo=$request->get('subtitulo');
 		$noticias->fecha=$request->get('fecha');
@@ -55,7 +54,6 @@ class NoticiasController extends Controller
 	public function update(NoticiasFormRequest $request, $id)
 	{
 		$noticias=Noticias::findOrFail($id);
-		$noticias->n=$request->get('n');
 		$noticias->titulo=$request->get('titulo');
 		$noticias->subtitulo=$request->get('subtitulo');
 		$noticias->fecha=$request->get('fecha');

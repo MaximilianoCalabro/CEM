@@ -13,7 +13,6 @@ class Noticias extends Model
 	public $timestamps=false;
 
 	protected $fillable =[
-		'n',
 		'titulo',
 		'subtitulo',
 		'fecha',
