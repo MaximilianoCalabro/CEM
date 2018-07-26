@@ -78,15 +78,14 @@ class NoticiasController extends Controller
 		$noticias->update();
 		if (Input::hasFile ('imagen_slider')){
 			foreach ($request->imagen_slider as $img) {
-				$slider=new Slider;
+				$slider=Slider::FindOrFail($id);
 				$slider->id_noticias=$noticias->id_noticias;
 				$file=$img;
 				$file->move(public_path().'/img/slider/',$file->getClientOriginalName());
 				$slider->imagen=$file->getClientOriginalName();
-				$slider->save();
+				$slider->update();
 			}
 		}
-		$slider->update();
 		return Redirect::to('noticias/inicio');
 	}
 	public function destroy($id)

@@ -162,24 +162,19 @@
 																@if ($loop->first)
         															<div class="item active">
 											                			<div class="bannerImage">
-											                  			 <a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
+											                  			 	<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
 											               				</div>                    
 											            			</div><!-- /Slide1 --> 
             													@else
                 													<div class="item">
 											                			<div class="bannerImage">
-											                    		<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
-											                		</div>                        
+											                    			<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
+											                			</div>									                                                         
 											            			</div><!-- /Slide2 --> 
        															 @endif
 										        			@endif
-
 										        		@endforeach
-											
-
-											                                 
-											 
-											        </div>
+													</div>
 											        
 											        <div class="control-box">                            
 											            <a data-slide="prev" href="#myCarousel-{{$nots->id_noticias}}" class="carousel-control left">‹</a>

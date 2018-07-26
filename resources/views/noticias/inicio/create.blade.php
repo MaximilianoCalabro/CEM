@@ -36,7 +36,7 @@
                   <textarea type="text" name="noticia" class="form-control" placeholder="Noticia"></textarea>
             </div>
             <div class="form-group">
-                  <label for="imagen_slider">Imágen (600 x 600 px)</label>
+                  <label for="imagen_slider">Imágen (Procurar q todas sean del mismo tamaño)</label>
                   <input type="file" name="imagen_slider[]" class="form-control" multiple>
             </div>
             <div class="form-group">
