@@ -154,36 +154,17 @@
 											        <h3>{{ $nots->titulo }}</h3>
 											    	
 											    </div>
-										       
-											    <div class="carousel slide" id="myCarousel-{{$nots->id_noticias}}">
-											        
-											        <div class="carousel-inner">
-											        	@foreach ($slider as $s)
-											        	@php ($j=1)
-										        		
-										        			@if($s->id_noticias == $nots->id_noticias)
-																@if ($loop->first || $j==$i)
-        															<div class="item active">
-            														@else
-                													<div class="item">
-                												@endif
-											                			<div class="bannerImage">
-											                    			<img src="{{url('/')}}/img/slider/{{$s->imagen_slider}}" alt="">
-											                			</div>									                                                         
-											            			</div><!-- /Slide2 --> 
-										        			@endif
-										        			
-										        		@php ($j++)
-										        		@endforeach
+										       	
+										       	<div class="main">
+										       		<div class="slides">
+										       			@foreach ($slider as $s)
+															@if($s->id_noticias == $nots->id_noticias)
+															<img src="{{url('/')}}/img/slider/{{$s->imagen_slider}}" alt="">
+															@endif
+														@endforeach
 													</div>
-											        
-											        <div class="control-box">                            
-											            <a data-slide="prev" href="#myCarousel-{{$nots->id_noticias}}" class="carousel-control left">‹</a>
-											            <a data-slide="next" href="#myCarousel-{{$nots->id_noticias}}" class="carousel-control right">›</a>
-											        </div><!-- /.control-box -->   
-											                              
-											    </div><!-- /#myCarousel -->
-												
+												</div>
+
 											    <div class="caption row-fluid">
 											        <div class="span4"><h3>{{ $nots->subtitulo }}</h3>
 											        </div>                	
@@ -197,7 +178,6 @@
 									</div><!-- /.container -->
 								</div>
 							</div>
-							@php ($i++)
 							@endforeach
 					</div>
 					<!-- /Main Column -->
@@ -315,5 +295,32 @@
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/main.js"></script>
 
+		<!-- Slider -->
+		<script src="js/jquery.slides.js"></script>
+		<script>
+	 
+		$(function(){
+	  		$(".slides").slidesjs({
+	    		play: {
+			      active: true,
+			        // [boolean] Generate the play and stop buttons.
+			        // You cannot use your own buttons. Sorry.
+			      effect: "slide",
+			        // [string] Can be either "slide" or "fade".
+			      interval: 3000,
+			        // [number] Time spent on each slide in milliseconds.
+			      auto: true,
+			        // [boolean] Start playing the slideshow on load.
+			      swap: true,
+			        // [boolean] show/hide stop and play buttons
+			      pauseOnHover: false,
+			        // [boolean] pause a playing slideshow on hover
+			      restartDelay: 2500
+			        // [number] restart delay on inactive slideshow
+			    }
+	  		});
+		});
+	 
+		</script>
 	</body>
 </html>
