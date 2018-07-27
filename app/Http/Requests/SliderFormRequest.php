@@ -24,7 +24,8 @@ class SliderFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'imagen'=>''
+            'imagen_slider'=>'',
+            'id_noticias'=>''
         ];
     }
 }

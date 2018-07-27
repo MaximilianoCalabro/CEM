@@ -79,6 +79,7 @@
                     
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
+
             <li class="header"></li>
             
             <li class="treeview">
@@ -100,34 +101,9 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/noticias/inicio"><i class="fa fa-circle-o"></i> Inicio Configurar</a></li>
-                <li><a href="/noticias/slider"><i class="fa fa-circle-o"></i> Slider</a></li>
               </ul>
             </li>
-
-
-<!--             <li class="treeview">
-              <a href="#">
-                <i class="fa fa-male"></i> <span>Acceso</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/user/configurar_user"><i class="fa fa-circle-o"></i> Usuario</a></li>
                 
-              </ul>
-            </li> -->
- <!--             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
-            </li> -->
-<!--             <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
-              </a>
-            </li> -->
-                        
           </ul>
         </section>
         <!-- /.sidebar -->

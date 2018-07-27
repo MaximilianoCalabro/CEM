@@ -39,7 +39,7 @@
                   <textarea type="text" name="noticia" class="form-control" placeholder="Noticia">{{$noticias->noticia}}</textarea>
             </div>
             <div class="form-group">
-                  <label for="imagen_slider">Imágen (nº x nº px)</label>
+                  <label for="imagen_slider">Imágen (Mismo tamaño / Agrega Imágenes)</label>
                   <input type="file" name="imagen_slider[]" class="form-control" multiple>
             </div>
             <div class="form-group">

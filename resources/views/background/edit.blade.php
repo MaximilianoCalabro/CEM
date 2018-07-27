@@ -23,7 +23,7 @@
                   <label for="imagen">Imágen de Fondo</label>
                   <input type="file" name="imagen" class="form-control" value="{{$background->imagen}}">
                   @if (($background->imagen)!='')
-                        <img src="{{asset('img/'.$background->imagen)}}" height="150px" width="150px">
+                        <img src="{{asset('img/fondo/'.$background->imagen)}}" height="150px" width="150px">
                   @endif
             </div>
             <div class="form-group">

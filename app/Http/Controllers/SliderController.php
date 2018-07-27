@@ -19,9 +19,8 @@ class SliderController extends Controller
     {
     	if ($request)
     	{
-    		$query=trim($request->get('searchText'));
     		$slider=DB::table('slider')->get();
-    		return view('noticias.slider.index',["slider"=>$slider,"searchText"=>$query]);
+    		return view('noticias.slider.index',["slider"=>$slider]);
     	}
     }
     public function create()
@@ -62,6 +61,6 @@ class SliderController extends Controller
 	{
 		$slider=Slider::findOrFail($id);
 		$slider->delete();
-		return Redirect::to('noticias/slider');
+		return Redirect::to('noticias/inicio');
 	}
 }

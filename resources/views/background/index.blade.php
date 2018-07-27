@@ -17,7 +17,7 @@
                	@foreach ($background as $cat)
 				<tr>
 					<td>{{ $cat->texto }}</td>
-					<td><img src="{{asset('img/'.$cat->imagen)}}" height="150px" width="150px"> </td>
+					<td><img src="{{asset('img/fondo/'.$cat->imagen)}}" height="150px" width="150px"> </td>
 					<td>
 						<a href="{{URL::action('BackgroundController@edit',$cat->id_background)}}"><button class="btn btn-info">Editar</button></a>
                         <!-- <a href="" data-target="#modal-delete-{{$cat->id_background}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a> -->

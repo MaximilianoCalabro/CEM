@@ -34,7 +34,7 @@ class BackgroundController extends Controller
 		$background->texto=$request->get('texto');
 		if (Input::hasFile ('imagen')){
 			$file=Input::file('imagen');
-			$file->move(public_path().'/img/',$file->getClientOriginalName());
+			$file->move(public_path().'/img/fondo/',$file->getClientOriginalName());
 			$background->imagen=$file->getClientOriginalName();
 		}
 		$background->save();
@@ -54,7 +54,7 @@ class BackgroundController extends Controller
 		$background->texto=$request->get('texto');
 		if (Input::hasFile ('imagen')){
 			$file=Input::file('imagen');
-			$file->move(public_path().'/img/',$file->getClientOriginalName());
+			$file->move(public_path().'/img/fondo/',$file->getClientOriginalName());
 			$background->imagen=$file->getClientOriginalName();
 		}
 		$background->update();

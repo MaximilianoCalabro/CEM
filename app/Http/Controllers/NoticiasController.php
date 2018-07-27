@@ -18,12 +18,11 @@ class NoticiasController extends Controller
     }
     public function index(Request $request)
     {
-    	if ($request)
+    	if ($request) 
     	{
-    		$query=trim($request->get('searchText'));
     		$noticias=DB::table('noticias')->get();
     		$slider=DB::table('slider')->get();
-    		return view('noticias.inicio.index',["noticias"=>$noticias,"searchText"=>$query, "slider"=>$slider]);
+    		return view('noticias.inicio.index',["noticias"=>$noticias, "slider"=>$slider]);
     	}
     }
     public function create()
@@ -49,7 +48,7 @@ class NoticiasController extends Controller
 				$slider->id_noticias=$noticias->id_noticias;
 				$file=$img;
 				$file->move(public_path().'/img/slider/',$file->getClientOriginalName());
-				$slider->imagen=$file->getClientOriginalName();
+				$slider->imagen_slider=$file->getClientOriginalName();
 				$slider->save();
 			}
 		}
@@ -76,22 +75,26 @@ class NoticiasController extends Controller
 			$noticias->imagen=$file->getClientOriginalName();
 		}
 		$noticias->update();
+
 		if (Input::hasFile ('imagen_slider')){
 			foreach ($request->imagen_slider as $img) {
-				$slider=Slider::FindOrFail($id);
+				$slider=new Slider;
 				$slider->id_noticias=$noticias->id_noticias;
 				$file=$img;
 				$file->move(public_path().'/img/slider/',$file->getClientOriginalName());
-				$slider->imagen=$file->getClientOriginalName();
-				$slider->update();
+				$slider->imagen_slider=$file->getClientOriginalName();
+				$slider->save();
 			}
 		}
+
 		return Redirect::to('noticias/inicio');
 	}
 	public function destroy($id)
 	{
+		dd("HOla");
 		$noticias=Noticias::findOrFail($id);
 		$noticias->delete();
+
 		return Redirect::to('noticias/inicio');
 	}
 

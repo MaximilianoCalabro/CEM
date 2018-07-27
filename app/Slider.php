@@ -13,7 +13,7 @@ class Slider extends Model
 	public $timestamps=false;
 
 	protected $fillable =[
-		'imagen',
+		'imagen_slider',
 		'id_noticias'
 	];
 

@@ -41,7 +41,7 @@
 			<div id="nav-header">
 				<div class="container">
 					<div class="header-logo">
-						<a href="#" class="logo"><img src="../img/logo.png" alt=""></a>
+						<a href="#" class="logo"><img src="../img/logos/logo.png" alt=""></a>
 						<!-- <div class="cubo"></div> -->
 					</div>
 					<div>
@@ -49,7 +49,7 @@
 					</div>
 					<nav id="main-nav">
 						<div class="nav-logo">
-							<a href="#" class="logo"><img src="../img/logo-alt.png" alt=""></a>
+							<a href="#" class="logo"><img src="../img/logos/logo-alt.png" alt=""></a>
 						</div>
 					</nav>
 				</div>
@@ -60,7 +60,7 @@
 		
 		<!-- SECTION -->
 		<div class="section">
-			<img src="{{url('/')}}/img/{{$background[0]->imagen}}" class="fondo">
+			<img src="{{url('/')}}/img/fondo/{{$background[0]->imagen}}" class="fondo">
 		</div>
 		<!-- /SECTION -->
 
@@ -79,22 +79,22 @@
 
 						<!-- section logos -->
 						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
-							<a href="http://www.carnave.com.ar/" target="_blank"><img src="../img/empresa1.png"></a>
+							<a href="http://www.carnave.com.ar/" target="_blank"><img src="../img/logos/empresa1.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
 						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
-							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/empresa2.png"></a>
+							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/logos/empresa2.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
 						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
-							<a href="http://www.ciaavicola.com.ar/" target="_blank"><img src="../img/empresa3.png"></a>
+							<a href="http://www.ciaavicola.com.ar/" target="_blank"><img src="../img/logos/empresa3.png"></a>
 						</div> <!-- /section logos -->
 
 						<!-- section logos -->
 						<div class="empresas col-md-6 col-xs-6 col-sm-6 col-lg-3">
-							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/empresa4.png"></a>
+							<a href="http://www.aghagronegocios.com.ar/" target="_blank"><img src="../img/logos/empresa4.png"></a>
 						</div> <!-- /section logos -->
 					</div> <!-- Main Column -->
 				</div> <!-- ROW -->
@@ -138,6 +138,7 @@
 						</div>
 						<!-- /owl carousel 2 -->
 						@foreach ($noticias as $nots)
+						@php ($i=1)
 						<div id="openModal-{{$nots->id_noticias}}" class="modalDialog">
 								<div>
 												
@@ -158,21 +159,21 @@
 											        
 											        <div class="carousel-inner">
 											        	@foreach ($slider as $s)
+											        	@php ($j=1)
+										        		
 										        			@if($s->id_noticias == $nots->id_noticias)
-																@if ($loop->first)
+																@if ($loop->first || $j==$i)
         															<div class="item active">
-											                			<div class="bannerImage">
-											                  			 	<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
-											               				</div>                    
-											            			</div><!-- /Slide1 --> 
-            													@else
+            														@else
                 													<div class="item">
+                												@endif
 											                			<div class="bannerImage">
-											                    			<a href="#"><img src="{{url('/')}}/img/slider/{{$s->imagen}}" alt=""></a>
+											                    			<img src="{{url('/')}}/img/slider/{{$s->imagen_slider}}" alt="">
 											                			</div>									                                                         
 											            			</div><!-- /Slide2 --> 
-       															 @endif
 										        			@endif
+										        			
+										        		@php ($j++)
 										        		@endforeach
 													</div>
 											        
@@ -196,6 +197,7 @@
 									</div><!-- /.container -->
 								</div>
 							</div>
+							@php ($i++)
 							@endforeach
 					</div>
 					<!-- /Main Column -->
