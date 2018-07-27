@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-07-2018 a las 11:17:57
+-- Tiempo de generación: 27-07-2018 a las 13:48:40
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -94,15 +94,12 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id_slider`, `imagen_slider`, `id_noticias`) VALUES
-(28, '217805_esmeralda.jpg', 21),
-(29, '217832_colon_1.jpg', 21),
-(30, 'ByrblPrNm_660x385__1.jpg', 21),
-(31, 'colon_2.jpg', 21),
 (41, '5ad9e2715ddd3_750x423.jpg', 22),
 (42, 'd1a6712ffeceee007bd894b731eacc71.jpg', 22),
-(43, 'DQZGFzLX4AAn_DM-620x400.jpg', 22),
 (44, '217925_casa_2.jpg', 23),
-(45, '217926_casa_3.jpg', 23);
+(45, '217926_casa_3.jpg', 23),
+(46, 'cristiano-ronaldo2-1440x864_c.jpg', 21),
+(47, 'GettyImages-660076378-670x385.jpg', 21);
 
 -- --------------------------------------------------------
 
@@ -124,7 +121,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'cem', '$2y$10$NK./lDEzpUpxLOUR9U59zO6Ob81kpTg51y98zwL4rPAIEz2zFwtcO', '5obOoU6RONCOLZLkDRo3ofi43LLQZ3QxzuXsNHT81H6BrAzTCbc8YZ1Wivdm', '2018-07-27 07:05:24', '2018-07-27 07:05:24');
+(1, 'cem', '$2y$10$NK./lDEzpUpxLOUR9U59zO6Ob81kpTg51y98zwL4rPAIEz2zFwtcO', '1DU6dZbNexXYqixwTyZqDngOTA8Uy4jLfrijwyBIfaC4lNyiPVvg7UUDH9Pc', '2018-07-27 07:05:24', '2018-07-27 07:05:24');
 
 --
 -- Índices para tablas volcadas
@@ -186,7 +183,7 @@ ALTER TABLE `noticias`
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
