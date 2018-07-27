@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-07-2018 a las 18:02:32
--- Versión del servidor: 10.1.29-MariaDB
--- Versión de PHP: 7.2.0
+-- Tiempo de generación: 27-07-2018 a las 11:17:57
+-- Versión del servidor: 10.1.33-MariaDB
+-- Versión de PHP: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,6 +44,18 @@ INSERT INTO `background` (`id_background`, `imagen`, `texto`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `noticias`
 --
 
@@ -61,31 +73,9 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id_noticias`, `titulo`, `fecha`, `imagen`, `subtitulo`, `noticia`) VALUES
-(5, 'Investigan un secuestro virtual en el centro de la ciudad', 'Miércoles 25.07.2018', '217771_1.jpg', 'Una vecina recibió un llamado en donde se le dijo que su hijo estaba secuestrado.', 'Por estas horas se investiga un caso ocurrido durante la madrugada de este miércoles en la ciudad de Santa Fe en el que se habría producido un presunto secuestro virtual.\r\n\r\nLas primeras informaciones indican que una vecina del centro de la capital provincial recibió un llamado al teléfono de su domicilio y le dijeron que tenían secuestrado a un hijo; por lo que le exigieron dinero para liberarlo.\r\n\r\nTambién se supo que la mujer dejó en la vereda de su vivienda una suma importante de dinero en pesos y dólares, como así también de algunas joyas de oro.\r\n\r\nPor último, se conoció que al poco tiempo se hizo presente el hijo de la mujer.'),
-(6, 'Piden mayor intervención del municipio en la zona de countries', 'Martes 24.07.2018', '217759_1.jpg', 'Preocupan algunos casos de inseguridad y también la quema de basura, la circulación de animales por el Acceso Norte y la falta de iluminación, entre otros problemas.', 'El crecimiento demográfico de los barrios privados en la zona de countries de la autopista Santa Fe - Rosario hace más visible los problemas ambientales, de planificación urbana y también de seguridad en la zona de Santo Tomé que va desde la calle República de Chile, donde comienza el Acceso Norte, hasta los countries Altos de la Ribera, La Tatenguita y el Club de Campo El Paso.'),
-(7, 'Falleció un motociclista tras siniestro vial en Monte Vera', 'Miércoles 25.07.2018', '217787_1.jpg', 'La víctima (56) intentó esquivar una bicicleta y derrapó en la Ruta 2, mil metros al norte de la intersección con la RP 5.', 'Por cuestiones que son materia de peritajes, este miércoles por la mañana se produjo un siniestro vial en la Ruta Provincial 2 que dejó como saldo un hombre fallecido.\r\n\r\n \r\n\r\nSegún se supo, el hecho tuvo lugar alrededor de las 6.30, 1000 metros al norte del cruce del mencionado camino con la Ruta Provincial 5, en el ingreso sur de la localidad de Monte Vera.Sobre los protagonistas del incidente, se supo que estuvieron involucrados una motocicleta, una bicicleta y un automóvil.  \r\n\r\n \r\n\r\nPor lo que pudo averiguar El Litoral, la víctima, un hombre de 56 años, habría intentado esquivar a una bicicleta y en esa maniobra derrapó e impactó contra la cinta asfáltica. \r\n\r\n \r\n\r\nEn el lugar trabajó personal policial y peritos, quienes interrumpieron el tránsito mientras realizaron trabajos periciales.');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `popup`
---
-
-CREATE TABLE `popup` (
-  `id_popup` int(11) NOT NULL,
-  `titulo` varchar(100) COLLATE utf8_bin NOT NULL,
-  `subtitulo` varchar(100) COLLATE utf8_bin NOT NULL,
-  `noticia` text COLLATE utf8_bin NOT NULL,
-  `imagen_slider` varchar(250) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `popup`
---
-
-INSERT INTO `popup` (`id_popup`, `titulo`, `subtitulo`, `noticia`, `imagen_slider`) VALUES
-(1, 'TITULO N°1', 'SUBTITULO N°1', 'NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA - NOTICIA -', 'img-lg-1.jpg'),
-(2, 'Mañana es MARTES!!!', 'Hoy es lunes', 'Son las 11:46 am, faltan 1 hora y cuarto para irme a casa, no me sale lo de las foreing keys... y solo me falta eso para terminar esta pagina, y la de Paillet', 'img-thumb-3.jpg');
+(21, 'Multa millonaria y cárcel para CR7', '26-07-2018', '1.jpg', 'Cristiano llegó a un acuerdo con el fisco español por las deudas que mantenía. Fue condenado a pagar y a dos años de cárcel, aunque sin prisión efectiva.', 'Mucho se dijo de que la llegada de Cristiano Ronaldo a la Juventus tuvo que ver más con los problemas tributarios del crack portugués en España que realmente con la búsqueda de un nuevo desafío deportivo. Finalmente, pactó con la Hacienda para saldar sus deudas que le trajeron más de una crítica y varios dolores de cabeza.'),
+(22, 'Multitudinaria marcha en contra de la reforma militar', 'Jueves 26.07.2018', 'marcha_1.jpg', 'Rechazo al decreto de Macri que habilita a los militares a participar en cuestiones de seguridad interior.', 'Una multitud se congregó hoy en la Plaza de Mayo de Buenos Aires y marchó hacia el Ministerio de Defensa para repudiar la reforma del sistema de defensa que dispuso la participación de las Fuerzas Armadas en cuestiones de seguridad interior.\r\n\r\n\r\nCon la consigna \"Fuerzas Armadas represivas, ¡nunca más!\", la marcha fue convocada por la asociación Abuelas de Plaza de Mayo, que advirtió que involucrar a los militares \"en seguridad interior genera muertes, tortura y desapariciones\", es anticonstitucional y \"viola los acuerdos que está obligado a cumplir el Estado argentino\". \r\n\r\n\r\nTambién adhieren a la marcha las Madres de Plaza de Mayo Línea Fundadora, la Asamblea Permanente por los Derechos Humanos, el Centro de Estudios Legales y Sociales y la Confederación General del Trabajo, entre otros organismos.'),
+(23, 'Al filo de la tragedia por un incendio en una casa', 'Jueves 26.07.2018', 'casa_1.jpg', 'Ocurrió durante la tarde de este jueves, en la esquina de Dr. Zavalla y Crespo. Una mujer, sus dos hijos y su mascota fueron rescatados de entre las llamas por vecinos y bomberos.', 'Un incendio de proporciones se desató este jueves por la tarde en una vivienda de barrio Roma y puso en peligro la vida de una mujer y sus dos hijos menores de edad.\r\n\r\n\r\nLa casa está ubicada en una de las esquinas que forman las calles Dr. Zavalla y Crespo, en la planta alta, sobre una conocida clínica de rehabilitación.\r\n\r\n\r\nLas llamas comenzaron aproximadamente a las 15, aparentemente por un desperfecto eléctrico, y rápidamente se propagaron por el inmueble.\r\n\r\n\r\n“Nosotros, con mi mamá, estábamos limpiando el negocio cuando sentimos el alboroto de gente, escuchamos los gritos y al salir vimos cómo emanaba mucho fuego de dos de las cuatro ventanas de la casa”, relató Daniela, quien atiende un pequeño almacén en la esquina opuesta.');
 
 -- --------------------------------------------------------
 
@@ -95,17 +85,46 @@ INSERT INTO `popup` (`id_popup`, `titulo`, `subtitulo`, `noticia`, `imagen_slide
 
 CREATE TABLE `slider` (
   `id_slider` int(11) NOT NULL,
-  `imagen` varchar(250) COLLATE utf8_bin NOT NULL
+  `imagen_slider` varchar(250) COLLATE utf8_bin NOT NULL,
+  `id_noticias` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `slider`
 --
 
-INSERT INTO `slider` (`id_slider`, `imagen`) VALUES
-(1, 'abdominoplastia.jpg'),
-(2, 'facial.jpg'),
-(3, 'axilas.jpg');
+INSERT INTO `slider` (`id_slider`, `imagen_slider`, `id_noticias`) VALUES
+(28, '217805_esmeralda.jpg', 21),
+(29, '217832_colon_1.jpg', 21),
+(30, 'ByrblPrNm_660x385__1.jpg', 21),
+(31, 'colon_2.jpg', 21),
+(41, '5ad9e2715ddd3_750x423.jpg', 22),
+(42, 'd1a6712ffeceee007bd894b731eacc71.jpg', 22),
+(43, 'DQZGFzLX4AAn_DM-620x400.jpg', 22),
+(44, '217925_casa_2.jpg', 23),
+(45, '217926_casa_3.jpg', 23);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'cem', '$2y$10$NK./lDEzpUpxLOUR9U59zO6Ob81kpTg51y98zwL4rPAIEz2zFwtcO', '5obOoU6RONCOLZLkDRo3ofi43LLQZ3QxzuXsNHT81H6BrAzTCbc8YZ1Wivdm', '2018-07-27 07:05:24', '2018-07-27 07:05:24');
 
 --
 -- Índices para tablas volcadas
@@ -118,22 +137,28 @@ ALTER TABLE `background`
   ADD PRIMARY KEY (`id_background`);
 
 --
+-- Indices de la tabla `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `noticias`
 --
 ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id_noticias`);
 
 --
--- Indices de la tabla `popup`
---
-ALTER TABLE `popup`
-  ADD PRIMARY KEY (`id_popup`);
-
---
 -- Indices de la tabla `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id_slider`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -146,22 +171,28 @@ ALTER TABLE `background`
   MODIFY `id_background` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id_noticias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT de la tabla `popup`
---
-ALTER TABLE `popup`
-  MODIFY `id_popup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_noticias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

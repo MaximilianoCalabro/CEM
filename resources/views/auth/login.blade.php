@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">INGRESAR</div>
+                <div class="card-header">LOGEARSE</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -45,7 +45,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Recordarme') }}
+                                        {{ __('Recordar') }}
                                     </label>
                                 </div>
                             </div>
@@ -57,9 +57,9 @@
                                     {{ __('Ingresar') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('¿Olvidaste tu contraseña?') }}
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </form>
