@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
             	<button class="btn btn-primary" type="submit">Guardar</button>
-            	<button class="btn btn-danger" type="reset">Cancelar</button>
+            	<button class="btn btn-danger" type="reset">Borrar</button>
             </div>
 		{!!Form::close()!!}		
             
