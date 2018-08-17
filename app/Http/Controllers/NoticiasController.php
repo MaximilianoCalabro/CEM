@@ -91,7 +91,6 @@ class NoticiasController extends Controller
 	}
 	public function destroy($id)
 	{
-		dd("HOla");
 		$noticias=Noticias::findOrFail($id);
 		$noticias->delete();
 
